@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import List from './components/List';
+import 'bootstrap/dist/css/bootstrap.css';
+import {motos} from "./components/Motos";
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="row">
+        <div className="col-sm"></div>
+        <div className="col-sm-6">
+          <h1>Current Motos status</h1>
+          <hr />
+          <List motos={motos} />
+        </div>
+        <div className="col-sm"></div>
+      </div>
     </div>
   );
 }
